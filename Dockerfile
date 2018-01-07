@@ -56,7 +56,7 @@ RUN sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc
 COPY --from=golang /go/bin/apk-file /usr/bin/
 COPY --from=golang /go/bin/ghq /usr/bin/
 # copy diff-highlight
-COPY --from=git /usr/src/git/contrib/diff-highlight /usr/bin/
+COPY --from=git /usr/src/git/contrib/diff-highlight/diff-highlight /usr/bin/
 
 RUN apk add --no-cache \
   neovim \

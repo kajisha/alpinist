@@ -22,6 +22,7 @@ RUN make
 FROM alpine:edge
 
 ENV EDITOR /usr/bin/nvim
+WORKDIR /root
 
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
@@ -86,3 +87,5 @@ RUN apk add --no-cache \
   ctags \
   less \
   jq
+
+WORKDIR /home/app

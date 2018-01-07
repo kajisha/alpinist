@@ -1,0 +1,11 @@
+sudo: true
+dist: trusty
+
+jobs:
+  include:
+    - stage: build docker image and push
+      script:
+      - docker login -u="${DOCKER_HUB_USERNAME}" -p="${DOCKER_HUB_PASSWORD}"
+      - docker build -t kajisha/alpinist .
+      - docker images
+      - docker push kajisha/alpinist

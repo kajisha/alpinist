@@ -1,6 +1,7 @@
 FROM golang:alpine as golang
 
-RUN apk add --update --no-cache git
+RUN apk add --update --no-cache ca-certificates \
+  git
 
 RUN go get github.com/jessfraz/apk-file
 RUN go get github.com/motemen/ghq

@@ -8,4 +8,4 @@ pull:
 	docker-compose pull
 
 run: pull
-	docker-compose run --rm alpine su - app || return 1
+	docker-compose run -u app --service-ports --rm alpine bash -i || return 1

@@ -90,4 +90,8 @@ RUN apk add --no-cache \
   less \
   jq
 
+# ocaml
+RUN apk add --no-cache \
+  opam
+
 WORKDIR /home/app

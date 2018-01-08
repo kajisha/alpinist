@@ -39,6 +39,7 @@ RUN apk add --no-cache \
   coreutils \
   findutils \
   file \
+  git \
   docker \
   bash
 
@@ -48,9 +49,7 @@ RUN addgroup app abuild
 RUN addgroup app wheel
 RUN addgroup app docker
 
-RUN apk add --no-cache \
-  sudo \
-  git
+RUN apk add --no-cache sudo
 RUN sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 
 # golang

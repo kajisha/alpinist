@@ -64,7 +64,8 @@ RUN apk add --no-cache \
 
 RUN apk add --no-cache \
   openssh \
-  libressl-dev
+  libressl-dev \
+  ncurses-dev
 
 RUN apk add --no-cache \
   the_silver_searcher \

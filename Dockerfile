@@ -92,6 +92,7 @@ RUN apk add --no-cache \
 
 # ocaml
 RUN apk add --no-cache \
+  m4 \
   opam
 
 WORKDIR /home/app

@@ -1,11 +1,17 @@
-.PONY: build run
+.PONY: build start stop pull run
 .DEFAULT_GOAL := run
 
 build: Dockerfile
 	docker build -t kajisha/alpinist .
 
+start:
+	docker-compose up -d
+
+stop:
+	docker-compose stop
+
 pull:
 	docker-compose pull
 
-run: pull
-	docker-compose run -u app --service-ports --rm alpine bash -i || return 1
+run: pull start
+	docker-compose exec -u app alpine bash -i

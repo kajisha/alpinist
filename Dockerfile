@@ -5,6 +5,7 @@ RUN apk add --update --no-cache ca-certificates \
 
 RUN go get github.com/jessfraz/apk-file
 RUN go get github.com/motemen/ghq
+RUN go get github.com/direnv/direnv
 
 FROM alpine:edge as git
 
@@ -55,6 +56,7 @@ RUN sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc
 # golang
 COPY --from=golang /go/bin/apk-file /usr/bin/
 COPY --from=golang /go/bin/ghq /usr/bin/
+COPY --from=golang /go/bin/direnv /usr/bin/
 # copy diff-highlight
 COPY --from=git /usr/src/git/contrib/diff-highlight/diff-highlight /usr/bin/
 

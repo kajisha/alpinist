@@ -1,4 +1,4 @@
-# Alpinist [![Build Status](https://travis-ci.org/kajisha/alpinist.svg?branch=master)](https://travis-ci.org/kajisha/alpinist)
+# Alpinist
 # How to use
 ## Run
 ```console

@@ -71,6 +71,11 @@ RUN apk add --no-cache \
   gnupg \
   perl-utils
 
+# dbms
+RUN apk add --no-cache \
+  postgresql-client \
+  postgresql-dev
+
 RUN apk add --no-cache \
   ctags \
   less \

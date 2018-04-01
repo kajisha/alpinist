@@ -30,10 +30,10 @@ require git rcup gpg
   git clone --depth=1 https://github.com/tmux-plugins/tpm.git $HOME/.tmux/plugins/tpm
 }
 
-RUBY_VERSION=${RUBY_VERSION:-2.5.0}
+RUBY_VERSION=${RUBY_VERSION:-2.5.1}
 PYTHON3_VERSION=${PYTHON3_VERSION:-3.6.4}
 PYTHON2_VERSION=${PYTHON2_VERSION:-2.7.14}
-NODEJS_VERSION=${NODEJS_VERSION:-8.9.4}
+NODEJS_VERSION=${NODEJS_VERSION:-8.11.1}
 
 [ -d $HOME/.asdf ] || {
   git clone --depth=1 https://github.com/asdf-vm/asdf.git $HOME/.asdf

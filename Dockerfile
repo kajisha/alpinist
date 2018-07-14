@@ -53,6 +53,7 @@ RUN apk add --no-cache \
 RUN apk add --no-cache \
   openssh \
   libressl-dev \
+  ncurses \
   ncurses-dev
 
 RUN apk add --no-cache \

@@ -7,5 +7,5 @@ make
 
 ## Setup
 ```console
-curl -L https://raw.githubusercontent.com/kajisha/alpinist/master/post_install.sh -o - | bash
+curl -L https://rawgit.com/kajisha/alpinist/master/post_install.sh -o - | bash
 ```
